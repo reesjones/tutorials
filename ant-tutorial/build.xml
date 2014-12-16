@@ -1,0 +1,50 @@
+<!-- Learning the ant build tool - following the tutorial at ant.apache.org (click manual on homepage) -->
+
+<project name="HelloWorld" default="dist" basedir=".">
+	<!-- Description of the project -->
+	<description>
+		A simple Ant tutorial project
+	</description>
+
+	<!-- set global properties for the build -->
+	<property name="src" location="src/" />
+	<property name="build" location="build/" />
+	<property name="dist" location="dist/" />
+
+	<target name="init"
+		description="creates timestamp, build directory structure">
+		<!-- time stamp - does this print out the time in the build output? -->
+		<tstamp />
+
+		<!-- Create the build directory structure used by compile -->
+		<mkdir dir="${build}" />
+	</target>
+
+	<!-- compile target -->
+	<target name="compile" depends="init" description="compile source in src/">
+		<!-- Compile the java code from ${src} into ${build} -->
+		<javac srcdir="${src}" destdir="${build}" />
+	</target>
+	
+	<!-- dist target -->
+	<target name="dist" depends="compile">
+		<description>
+			Generate the distribution
+		</description>
+		<!-- Create dist/ directory -->
+		<mkdir dir="${dist}/lib/" />
+
+		<!-- Put everything in ${build} into the HelloWorld-${DSTAMP}.jar file -->
+		<!-- ${DSTAMP} is the time stamp from the init target -->
+		<jar jarfile="${dist}/lib/HelloWorld-${DSTAMP}.jar" basedir="${build}" />
+	</target>
+
+	<target name="clean">
+		<description>
+			Clean up the build and dist targets by emptying ${build} and ${dist}
+		</description>
+		<!-- Delete the ${build} and ${dist} directory trees -->
+		<delete dir="${build}" />
+		<delete dir="${dist}" />
+	</target>
+</project>
