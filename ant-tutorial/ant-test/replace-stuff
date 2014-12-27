@@ -1,0 +1,5 @@
+Replace the following line with "bar" using replace.xml:
+bar
+
+Later it'll be used in new-command.xml, which initializes an xml file
+for a certain command in the format used in this ant-test directory.

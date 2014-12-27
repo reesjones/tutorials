@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Usage: ant -buildfile copy.xml -->
+
+<project name="copy.xml">
+	<description>
+		Testing the copy tag.
+	</description>
+	
+	<copy file="file1" tofile="file1Copy" />
+	
+</project>

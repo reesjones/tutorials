@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Usage: ant -buildfile sleep.xml -->
+
+<project name="sleep.xml">
+	<description>
+		Testing the sleep tag.
+	</description>
+	
+	<sleep milliseconds="50" />
+
+	<sleep seconds="5" />
+
+	<!--
+	<sleep hours="3" minutes="15" />
+	-->
+	
+</project>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Usage: ant -buildfile new-command.xml -->
+
+<project name="new-command" default="replace">
+	<description>
+		Creates a new xml file for a specific command, making a new xml file based on shell.xml and changing the 
+		[tagname] string in shell.xml to the command (tag) name and making a new file based on this.
+	</description>
+	
+	<!-- The "command" property should be set in the command line when ant is run. 
+		Usage: ant -Dcommand="command-name-here" -buildfile newcommand.xml
+	-->
+	
+
+	<!-- Copies the shell.xml to ${command}.xml -->
+	<target name="copy">
+		<copy file="shell.xml" tofile="${command}.xml" />
+	</target>
+
+	<!-- Replaces all instances of "[tagname]" in new xml file with ${command} -->
+	<target name="replace" depends="copy">
+		<replace
+			file="${command}.xml"
+			token="[tagname]"
+			value="${command}"
+		/>
+	</target>
+	
+	
+</project>

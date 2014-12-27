@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Usage: ant -buildfile touch.xml -->
+
+<project name="touch.xml">
+	<description>
+		Testing the touch tag.
+	</description>
+	
+	<!-- datetime must be formatted exactly for ant to parse correctly -->
+	<!-- MM/DD/YYYY HH:MIN am/pm -->
+	<touch file="file3" datetime="12/26/2014 12:00 am" />
+	
+</project>

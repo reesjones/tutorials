@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Usage: ant -buildfile echo.xml -->
+
+<project name="echo.xml" default="message">
+	<description>
+		Testing the echo tag.
+	</description>
+	
+	<target name="message">
+		<echo message="Hello World" />
+	</target>
+	
+</project>

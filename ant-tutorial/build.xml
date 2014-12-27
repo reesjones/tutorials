@@ -3,7 +3,7 @@
 <project name="HelloWorld" default="dist" basedir=".">
 	<!-- Description of the project -->
 	<description>
-		A simple Ant tutorial project
+		A simple Ant tutorial project.
 	</description>
 
 	<!-- set global properties for the build -->
@@ -38,11 +38,11 @@
 		<!-- ${DSTAMP} is the time stamp from the init target -->
 		<jar jarfile="${dist}/lib/HelloWorld-${DSTAMP}.jar" basedir="${build}" />
 	</target>
-
-	<target name="clean">
-		<description>
-			Clean up the build and dist targets by emptying ${build} and ${dist}
-		</description>
+	
+	<!-- Currently unused. -->
+	<target name="clean" depends="dist"
+		description="Clean up the build and dist targets by emptying ${build} and ${dist}" >
+		<echo message="clean target has been called" />
 		<!-- Delete the ${build} and ${dist} directory trees -->
 		<delete dir="${build}" />
 		<delete dir="${dist}" />

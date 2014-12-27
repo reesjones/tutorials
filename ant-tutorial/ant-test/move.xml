@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Usage: ant -buildfile move.xml -->
+
+<project name="move.xml">
+	<description>
+		Testing the move tag.
+	</description>
+	
+	<move file="file1Copy" tofile="file2" />
+	
+</project>

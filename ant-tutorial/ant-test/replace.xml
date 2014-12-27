@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Usage: ant -buildfile replace.xml -->
+
+<project name="replace.xml">
+	<description>
+		Testing the replace tag.
+	</description>
+	
+	<replace
+		file="replace-stuff"
+		token="foo"
+		value="bar"
+	/>
+
+	
+</project>

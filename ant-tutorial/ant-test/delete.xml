@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Usage: ant -buildfile delete.xml -->
+<project name="delete">
+	<description>
+		Testing the delete tag.
+	</description>
+	
+	<property name="test" location="test/" />
+
+
+	<mkdir dir="${test}" />
+
+	<delete dir="${test}" />
+
+</project>
