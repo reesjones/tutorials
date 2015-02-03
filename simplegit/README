@@ -1,0 +1,22 @@
+SimpleGit Ruby Library
+======================
+
+This library calls git commands and returns the output.
+
+Author : Scott Chacon
+
+User : Mitch Rees-Jones
+
+
+The git init command initializes the working directory into a git repository by adding the .git folder and .gitignore.
+
+The git add command adds a file to the tracked files list if it is not there already. It also stages the file after possibly adding it to the tracked files list if it needed to.
+^too wordy
+
+The git status command shows the differences made since the last commit. Not as detailed as the 
+
+The git diff command outputs the changes that have been made that haven't been staged yet.
+The git diff HEAD command outputs the changes that have been made that both have and haven't been staged yet
+
+The git commit command saves a local snapshot of the staging area.
+The git commit -a command does the same as 'git commit', but executes 'git add' on all tracked files beforehand.
